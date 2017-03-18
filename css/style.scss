@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Fjalla+One");
+/* ********* Tags ********** */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Open Sans", Tahoma, Verdana;
+}
+
+body {
+  background: linear-gradient(to bottom, #ccc, #f1f1f1) fixed;
+}
+
+.no-cssgradients body {
+  background: url("images/bg2.jpg");
+}
+
+header {
+  width: 100%;
+  background: #000;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+nav {
+  float: right;
+  margin-top: 15px;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline;
+}
+
+nav ul li a {
+  font: 1.2em;
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 20px;
+  transition: all 0.5s;
+}
+nav ul li a:hover {
+  color: #F00;
+}
+
+h1 {
+  margin: 10px 0px 0px;
+  font: 3em "Fjalla One", Tahoma;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 10px 0px;
+  font: 2.5em "Fjalla One", Tahoma;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin: 0px 0px 10px;
+  font: 1.5em "Fjalla One", Tahoma;
+  color: #666;
+}
+
+p {
+  font-size: 1.1em;
+  margin: 10px 0px;
+}
+
+footer {
+  width: 100%;
+  padding: 10px 0px;
+  font-family: "Open Sans", Tahoma, Verdana;
+  color: #FFF;
+  background: #000;
+  float: left;
+}
+footer p {
+  margin: 10px 0px;
+  font-size: 1em;
+}
+footer a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+footer a:hover {
+  color: #F00;
+}
+
+/* ********* Ids ********** */
+#filmes {
+  width: 100%;
+  padding: 30px 0px;
+  background: url(../images/bg.jpg) fixed;
+  background-size: cover;
+  float: left;
+  margin: 50px 0px 0px 0px;
+}
+#filmes h1 {
+  color: #FFF;
+}
+
+#banner {
+  width: 100%;
+  background: #000;
+}
+#banner img {
+  width: 100%;
+  filter: opacity(50%);
+  -webkit-filter: opacity(50%);
+}
+#banner .texto {
+  position: absolute;
+  margin: -400px 0px 0px 30px;
+}
+#banner .texto h2 {
+  font: 3em "Fjalla One", Tahoma;
+  color: #FFF;
+  margin: 0px 0px 40px;
+}
+#banner .texto a {
+  font: 1em "Fjalla One", Tahoma;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 10px;
+  margin: 70px 0px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+#banner .texto a:hover {
+  background: #FFF;
+  color: #000;
+}
+
+#banner p {
+  font: 1.2em "Fjalla One", Tahoma;
+}
+
+/* ********* Classes ********** */
+.col1 {
+  float: left;
+  width: 25%;
+}
+
+.col2 {
+  float: right;
+  width: 70%;
+}
+
+.clear {
+  clear: both;
+}
+
+.menu {
+  float: right;
+  color: #FFF;
+  border: 1px solid #FFF;
+  border-radius: 2px;
+  padding: 5px 10px;
+  font-size: 1.5em;
+}
+
+.img {
+  width: 100%;
+  -webkit-filter: brightness(70%);
+  filter: brightness(70%);
+  transition: all 0.5s;
+}
+.img:hover {
+  -webkit-filter: brightness(100%);
+  filter: brightness(100%);
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
+.box {
+  width: 320px;
+  margin: 10px 10px 10px 0px;
+  float: left;
+}
+.box a img {
+  -webkit-filter: sepia(70%);
+  filter: sepia(70%);
+  transition: all 0.5s;
+  border: 5px solid #000;
+}
+.box a img:hover {
+  -webkit-filter: sepia(0%);
+  filter: sepia(0%);
+}
+
+.texto p {
+  color: #FFF;
+}
+
+.center {
+  text-align: center;
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+/* ******* Media Queries ******* */
+@media only screen and (max-width: 320px) {
+  body {
+    width: 320px;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: table;
+  }
+
+  .container {
+    width: 300px;
+    padding: 10px;
+  }
+
+  #banner .texto {
+    position: absolute;
+    margin: -150px 0px 0px 30px;
+  }
+  #banner .texto p {
+    font: 1em "Fjalla One", Tahoma;
+  }
+  #banner .texto h2 {
+    font: 1.4em "Fjalla One", Tahoma;
+    color: #FFF;
+    margin: 0px 0px 20px;
+  }
+  #banner .texto a {
+    font: 1em "Fjalla One", Tahoma;
+  }
+
+  #filmes .box {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav {
+    float: left;
+    width: 100%;
+    position: absolute;
+    z-index: 10000;
+    background-color: #000;
+    margin: -10px;
+  }
+  nav ul li {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #FFF;
+    clear: both;
+    padding: 10px 0px;
+    text-align: center;
+  }
+
+  .col1, .col2 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: table;
+  }
+
+  .container {
+    width: 460px;
+    padding: 10px;
+  }
+
+  #banner .texto {
+    position: absolute;
+    margin: -200px 0px 0px 30px;
+  }
+  #banner .texto p {
+    font: 1em "Fjalla One", Tahoma;
+  }
+  #banner .texto h2 {
+    font: 2em "Fjalla One", Tahoma;
+    color: #FFF;
+    margin: 0px 0px 40px;
+  }
+  #banner .texto a {
+    font: 1em "Fjalla One", Tahoma;
+  }
+
+  #filmes .box {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav {
+    float: left;
+    width: 100%;
+    position: absolute;
+    z-index: 10000;
+    background-color: #000;
+    margin: -10px;
+  }
+  nav ul li {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #FFF;
+    clear: both;
+    padding: 10px 0px;
+    text-align: center;
+  }
+
+  .col1, .col2 {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
